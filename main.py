@@ -1,3 +1,6 @@
+from stats import get_word_count
+
+
 """
 lavet til første opgave, return hele teksten fra filen.
 
@@ -11,14 +14,7 @@ def get_book_text(file_path):
 get_word_count, tager filen og åbner den, 
 derefter splitter den teksten og tæller hvor mange ord der er.
 """
-def get_word_count(file_path):
-    with open(file_path) as file:
-        text = file.read()
 
-    words = text.split()
-    return len(words)
-
-    
 def main():
     ## sti til bog
     book_path = "books/frankenstein.txt"
