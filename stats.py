@@ -8,4 +8,8 @@ def character_counter(text):
 
     for character in lower_text:
         char_dict[character] = char_dict.get(character, 0) + 1
-    return char_dict
+##    return char_dict
+
+    sorted_list = [{"char": karakter, "num": værdi} for karakter, værdi in char_dict.items()]
+    sorted_list.sort(key=lambda d: d["num"], reverse=True)
+    return sorted_list

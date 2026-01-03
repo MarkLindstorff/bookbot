@@ -17,7 +17,10 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {total_words} total words")
     print("--------- Character Count -------")
-    print(chars)
+    for item in character_counter(text):
+        if item['char'].isalpha():
+            print(f"{item['char']}: {item['num']}")
+    print("============= END ===============")
 
 
 
